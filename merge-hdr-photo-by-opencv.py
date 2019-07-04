@@ -34,10 +34,10 @@ def make_filenames_times(input_filename_list):
 
 
 def readImagesAndTimes(input_filenames, input_times):
-    # 曝光时间列表
-    times = input_times
     # 图像文件名称列表
     filenames = input_filenames
+    # 曝光时间列表
+    times = input_times
     images = []
     for filename in filenames:
         im = cv2.imread(filename)
