@@ -30,6 +30,10 @@ def make_filenames_times(input_filename_list):
         _time_raw = get_photo_exif_exposuretime(_file_path)
         _time_float = float(Fraction(str(_time_raw)))
         _times.append(_time_float)
+        '''
+        _time_raw 是 class_object,可被 print,不可用于计算,
+        Fraction 可转换分数，但只支持 str
+        '''
     return _filenames, np.array(_times, dtype=np.float32)
 
 
